@@ -9,23 +9,53 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" style="left: 3rem; right: 3rem;">
+  <!-- barra de navegación -->
+  <nav class="navbar navbar-expand-xl bg-body-tertiary fixed-top nav-underline" style="left: 3rem; right: 3rem;">
     <div class="container-fluid">
-
-      <a class="navbar-brand" href="#">Navbar</a>
-
-      <div class="ms-auto d-flex align-items-center theme-toggle">
-        <span id="iconLight" class="theme-icon">🌞</span>
-
-        <div class="form-check form-switch m-0">
-          <input class="form-check-input" type="checkbox" id="themeSwitch">
-        </div>
-
-        <span id="iconDark" class="theme-icon">🌙</span>
+      <!-- Enlace a la página principal con el logo y nombre -->
+      <a class="navbar-brand d-flex align-items-center ms-2" href="index.html#about">
+        <img src="./images/logo.png" alt="Logo de Ing. Eduardo Herrera Forero" width="30" height="30"
+          class="d-inline-block align-text-top me-1" />
+        <span class="d-none d-sm-inline">Ing. Eduardo Herrera Forero</span>
+      </a>
+      <!-- Botón para activar el menú en dispositivos pequeños -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Menú de navegación -->
+      <div class="collapse navbar-collapse ms-auto text-center" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 justify-content-lg-end w-100">
+          <li class="nav-item">
+            <a class="nav-link mx-1 active" aria-current="page" href="index.html#about">SOBRE MÍ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-1" href="index.html#resume">EXPERIENCIA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-1" href="index.html#studies">ESTUDIOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-1" href="index.html#blog">PUBLICACIONES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-1" href="index.html#contact">CONTACTO</a>
+          </li>
+          <li class="nav-item d-flex justify-content-center">
+            <!-- Botón temas-->
+            <div class="d-flex align-items-center theme-toggle">
+              <span id="iconLight" class="theme-icon">🌞</span>
+              <div class="form-check form-switch m-0">
+                <input class="form-check-input" type="checkbox" id="themeSwitch">
+              </div>
+              <span id="iconDark" class="theme-icon">🌙</span>
+            </div>
+          </li>
+        </ul>
       </div>
-
     </div>
   </nav>
+  <!-- barra de navegación Fin -->
 
   <main class="row flex-fill mx-0 mx-5" style="padding-top: 56px;">
 
@@ -43,7 +73,7 @@
         totam iste.
     </section>
 
-    <aside class="col-lg-3 bg-body-tertiary">Barra lateral
+    <aside class="col-lg-3 d-none d-lg-block bg-body-tertiary">Barra lateral
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ducimus mollitia consequuntur laudantium
         adipisci dignissimos error aut, cum beatae rem enim, ad sequi unde quod? Earum laborum nostrum consequuntur
         corrupti?

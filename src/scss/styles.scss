@@ -1,5 +1,14 @@
+// Sobrescribir variables ANTES de importar Bootstrap
+$font-size-base: 1.25rem; // 20px (base 16px × 1.25 = 20px)
+
 // Import all of Bootstrap's CSS
 @import "bootstrap/scss/bootstrap";
+
+
+// Resetar el tamaño original de Bootstrap (16px) de nav
+nav {
+  font-size: 16px; // O en rem relativo al html: 0.8rem (16/20)
+}
 
 /* ===== BOTÓN TEMAS ===== */
 
