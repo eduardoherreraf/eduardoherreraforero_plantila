@@ -1,13 +1,62 @@
 // Sobrescribir variables ANTES de importar Bootstrap
 $font-size-base: 1.25rem; // 20px (base 16px × 1.25 = 20px)
 
+// $primary: red;
+$enable-negative-margins: true;
+
+// Tamaños de h1 a h6
+$h1-font-size: 6rem;
+$h2-font-size: 3rem;
+$h3-font-size: 2.5rem;
+$h4-font-size: 2rem;
+$h5-font-size: 1.7rem;
+$h6-font-size: 1.5rem;
+
 // Import all of Bootstrap's CSS
 @import "bootstrap/scss/bootstrap";
 
+html {
+  scroll-behavior: smooth;
+  /* Ajuste para la barra de navegación fija */
+  scroll-padding-top: 3rem; /* O un valor que coincida con la altura de tu navbar */
+}
+
+body {
+  box-sizing: border-box;
+}
 
 // Resetar el tamaño original de Bootstrap (16px) de nav
 nav {
   font-size: 16px; // O en rem relativo al html: 0.8rem (16/20)
+}
+
+// mi font-family
+@import url("https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@100&display=swap");
+
+.text_saira {
+  font-family: "Saira Extra Condensed", sans-serif;
+}
+
+// Encabezados
+h1,
+h2,
+h3 {
+  font-weight: bold;
+  font-family: "Saira Extra Condensed", sans-serif;
+  text-transform: uppercase;
+  text-wrap: balance;
+  vertical-align: middle !important;
+  color: #0d6efd;
+}
+
+h4,
+h5,
+h6 {
+  font-family: "Saira Extra Condensed", sans-serif;
+  text-transform: uppercase;
+  text-wrap: balance;
+  vertical-align: middle !important;
+  color: #6ea8fe;
 }
 
 /* ===== BOTÓN TEMAS ===== */
@@ -38,7 +87,7 @@ nav {
 
 /* icono inactivo */
 .theme-icon.inactive {
-  transform: scale(.8);
+  transform: scale(0.8);
   opacity: 0.3;
 }
 
