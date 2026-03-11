@@ -99,3 +99,11 @@ h6 {
 .theme-toggle .form-check-input {
   margin-left: 0;
 }
+
+/* ===== CALCULO DE LA POS DEL PANEL PUBLICACIONES QU ES FIJO ===== */
+.sidebar-sticky {
+  position: sticky;
+  top: 56px;
+  height: calc(100vh - 56px);
+  overflow-y: auto;
+}
