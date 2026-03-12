@@ -15,3 +15,7 @@ import { initTheme } from "./theme.js";
 document.addEventListener("DOMContentLoaded", () => {
   initTheme();
 });
+
+// Inicializar todos los tooltips de la página
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));

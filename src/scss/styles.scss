@@ -112,7 +112,6 @@ h6 {
   height: 9rem;
 }
 
-
 // Separador de artículos
 hr.subtle-divider {
   border: none;
@@ -128,4 +127,10 @@ hr.subtle-divider {
   /* Degradado */
   margin: 20px 1.25rem;
   /* Margen */
+}
+
+// Ancho del tooltip de licencia CC
+.tooltip-wide .tooltip-inner {
+  max-width: 400px;
+  text-align: left;
 }
