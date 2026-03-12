@@ -42,6 +42,19 @@
 *.ttf  binary
 *.eot  binary
 
+# Archivos de texto adicionales
+*.txt      text eol=lf
+*.xml      text eol=lf
+*.svg      text eol=lf
+*.env      text eol=lf
+*.env.*    text eol=lf
+
+# Binarios adicionales
+*.webp     binary
+*.avif     binary
+*.otf      binary
+*.map      binary
+
 # Excluir de exportaciones (opcional)
 .gitattributes export-ignore
 .gitignore export-ignore
