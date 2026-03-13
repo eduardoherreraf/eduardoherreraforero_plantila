@@ -6,8 +6,8 @@ import * as bootstrap from "bootstrap";
 // Import our custom CSS
 import "../scss/styles.scss";
 
-// Iconos de Bootstrap 
-import 'bootstrap-icons/font/bootstrap-icons.css';
+// Iconos de Bootstrap
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 // main.js
 import { initTheme } from "./theme.js";
@@ -17,5 +17,20 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Inicializar todos los tooltips de la página
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-tooltipTriggerList.forEach(el => new bootstrap.Tooltip(el));
+const tooltipTriggerList = document.querySelectorAll(
+  '[data-bs-toggle="tooltip"]',
+);
+tooltipTriggerList.forEach((el) => new bootstrap.Tooltip(el));
+
+// ===== LÍNEA DE TIEMPO =====
+window.tlToggle = function (el) {
+  const wasOpen = el.classList.contains("open");
+  document.querySelectorAll(".tl-item.open").forEach((item) => {
+    item.classList.remove("open");
+    item.querySelector(".tl-toggle").textContent = "▸ Ver más";
+  });
+  if (!wasOpen) {
+    el.classList.add("open");
+    el.querySelector(".tl-toggle").textContent = "▾ Ver menos";
+  }
+};

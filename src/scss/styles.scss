@@ -136,3 +136,161 @@ hr.subtle-divider {
   max-width: 400px;
   text-align: left;
 }
+
+// ===== LÍNEA DE TIEMPO =====
+
+.tl-hint {
+  color: var(--bs-secondary-color);
+  margin-bottom: 1.2rem;
+  font-family: sans-serif;
+}
+
+.tl-items {
+  position: relative;
+}
+
+.tl-item {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 1.6rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.tl-dot-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 2.4rem;
+  padding-top: 0.3rem;
+}
+
+.tl-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #0d6efd;
+  background: var(--bs-body-bg);
+  transition: background 0.2s, transform 0.2s;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.tl-item:hover .tl-dot,
+.tl-item.open .tl-dot {
+  background: #0d6efd;
+  transform: scale(1.3);
+}
+
+.tl-card {
+  flex: 1;
+  border: 0.5px solid var(--bs-border-color);
+  border-radius: 10px;
+  background: var(--bs-body-bg);
+  padding: 0.75rem 1rem;
+  transition: border-color 0.2s;
+}
+
+.tl-item:hover .tl-card,
+.tl-item.open .tl-card {
+  border-color: #0d6efd;
+}
+
+.tl-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.tl-role {
+  font-weight: 700;
+  font-family: "Saira Extra Condensed", sans-serif;
+  text-transform: uppercase;
+  color: #0d6efd;
+  line-height: 1.15;
+  font-size: 3rem;
+}
+
+.tl-company {
+  font-weight: 400;
+  color: var(--bs-secondary-color);
+  margin-top: 0.15rem;
+  font-style: italic;
+}
+
+.tl-period {
+  color: var(--bs-secondary-color);
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-align: right;
+  margin-top: 0.1rem;
+}
+
+.tl-toggle {
+  color: #0d6efd;
+  margin-top: 0.4rem;
+  display: inline-block;
+  user-select: none;
+}
+
+.tl-details {
+  display: none;
+  margin-top: 0.6rem;
+  padding-top: 0.6rem;
+  border-top: 0.5px solid var(--bs-border-color);
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      color: var(--bs-secondary-color);
+      line-height: 1.45;
+      padding: 0.2rem 0 0.2rem 1rem;
+      position: relative;
+      font-family: sans-serif;
+      font-weight: 400;
+
+      &::before {
+        content: '›';
+        position: absolute;
+        left: 0;
+        color: #6ea8fe;
+        font-weight: 700;
+      }
+
+      a {
+        color: #0d6efd;
+      }
+    }
+  }
+}
+
+.tl-item.open .tl-details {
+  display: block;
+}
+
+.tl-decade {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 1.8rem 0 1rem;
+}
+
+.tl-decade-label {
+  font-size: 1.6rem;
+  font-family: "Saira Extra Condensed", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--bs-secondary-color);
+  white-space: nowrap;
+  padding-left: 2.4rem;
+}
+
+.tl-decade-line {
+  flex: 1;
+  height: 0.5px;
+  background: var(--bs-border-color);
+}
