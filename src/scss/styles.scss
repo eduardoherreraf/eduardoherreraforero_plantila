@@ -172,7 +172,9 @@ hr.subtle-divider {
   border-radius: 50%;
   border: 2px solid #0d6efd;
   background: var(--bs-body-bg);
-  transition: background 0.2s, transform 0.2s;
+  transition:
+    background 0.2s,
+    transform 0.2s;
   flex-shrink: 0;
   z-index: 1;
 }
@@ -193,7 +195,8 @@ hr.subtle-divider {
 }
 
 .tl-item:hover .tl-card,
-.tl-item.open .tl-card {
+.tl-item.open .tl-card,
+.card:hover {
   border-color: #0d6efd;
 }
 
@@ -254,7 +257,7 @@ hr.subtle-divider {
       font-weight: 400;
 
       &::before {
-        content: '›';
+        content: "›";
         position: absolute;
         left: 0;
         color: #6ea8fe;

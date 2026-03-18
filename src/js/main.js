@@ -9,7 +9,7 @@ import "../scss/styles.scss";
 // Iconos de Bootstrap
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-// main.js
+// Manejo de botón cambio de tema
 import { initTheme } from "./theme.js";
 
 document.addEventListener("DOMContentLoaded", () => {
