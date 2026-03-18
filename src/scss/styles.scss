@@ -147,16 +147,27 @@ hr.subtle-divider {
   height: 48px;
   cursor: pointer;
   display: none;
-  transition: 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
   padding: 10px;
-  color: rgb(204, 203, 203);
+  background-color: var(--bs-secondary-bg); // ← coherente con navbar
+  color: var(--bs-body-color); // ← se adapta solo al tema
+  border: 1px solid var(--bs-border-color); // ← borde sutil como navbar
   border-radius: 5px;
-  border: 0;
-  z-index: 999; /* importante */
+  z-index: 999;
+
+  &:hover {
+    background-color: var(
+      --bs-tertiary-bg
+    ); // ← un tono más claro/oscuro al pasar el mouse
+    color: var(--bs-emphasis-color); // ← máximo contraste en hover
+  }
 }
 
-#myBtnScroll:hover {
-  background-color: #555;
+#myBtnScroll svg {
+  display: block;
+  margin: auto;
 }
 
 // ===== LÍNEA DE TIEMPO =====
