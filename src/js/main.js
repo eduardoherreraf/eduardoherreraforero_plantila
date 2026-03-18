@@ -34,3 +34,20 @@ window.tlToggle = function (el) {
     el.querySelector(".tl-toggle").textContent = "▾ Ver menos";
   }
 };
+
+// ===== BOTÓN HACIA ARRIBA =====
+const myButton = document.getElementById("myBtnScroll");
+
+// Mostrar botón al hacer scroll
+window.addEventListener("scroll", function () {
+  if (document.documentElement.scrollTop > 100) {
+    myButton.style.display = "block";
+  } else {
+    myButton.style.display = "none";
+  }
+});
+
+// Ir arriba — ya no necesitas window.topFunction
+myButton.addEventListener("click", function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});

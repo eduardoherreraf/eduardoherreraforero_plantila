@@ -126,6 +126,7 @@ hr.subtle-divider {
     white,
     rgba(50, 50, 50, 0.6)
   );
+
   /* Degradado */
   margin: 20px 1.25rem;
   /* Margen */
@@ -135,6 +136,27 @@ hr.subtle-divider {
 .tooltip-wide .tooltip-inner {
   max-width: 400px;
   text-align: left;
+}
+
+//  botón to top
+#myBtnScroll {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  display: none;
+  transition: 0.3s;
+  padding: 10px;
+  color: rgb(204, 203, 203);
+  border-radius: 5px;
+  border: 0;
+  z-index: 999; /* importante */
+}
+
+#myBtnScroll:hover {
+  background-color: #555;
 }
 
 // ===== LÍNEA DE TIEMPO =====
